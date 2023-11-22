@@ -33,12 +33,6 @@ build {
     destination = "/home/ec2-user/app"
 }
 
-  provisioner "shell" {
-    inline = [
-      "ls -ltra /home/ec2-user/app/ssl/"
-    ]
-  }
-
   provisioner "file" {
     name        = "provision_app"
     source      = "./files/setup_app.sh"

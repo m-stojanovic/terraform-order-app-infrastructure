@@ -3,13 +3,8 @@
 # Installing PostgreSQL and Docker
 sudo yum install -y postgresql docker || { echo "Installation failed"; exit 1; }
 
-# Enabling Docker 
-whoami
-sudo systemctl status docker
-#sudo usermod -aG docker ec2-user
-# sudo systemctl enable docker
+# Starting Docker 
 sudo systemctl start docker
-sudo systemctl status docker
 
 # Building the frontend Docker image
 echo "Building frontend-app image..."
